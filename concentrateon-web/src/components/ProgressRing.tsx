@@ -1,50 +1,51 @@
-interface ProgressRingProps {
+interface ProgressBarProps {
   secondsLeft: number;
   totalSeconds: number;
   isWorking: boolean;
 }
 
-export function ProgressRing({ secondsLeft, totalSeconds, isWorking }: ProgressRingProps) {
-  const progress = totalSeconds > 0 ? secondsLeft / totalSeconds : 0;
+export function ProgressBar({ secondsLeft, totalSeconds, isWorking }: ProgressBarProps) {
+  const progress = totalSeconds > 0 ? ((totalSeconds - secondsLeft) / totalSeconds) * 100 : 0;
   const color = isWorking ? "var(--color-error)" : "var(--color-success)";
-  const trackColor = isWorking ? "rgba(255,0,0,0.15)" : "rgba(0,200,80,0.15)";
-
-  // Compact ring — wraps around the timer text
-  const size = 120;
-  const strokeWidth = 4;
-  const radius = (size - strokeWidth) / 2;
-  const circumference = 2 * Math.PI * radius;
-  const dashOffset = circumference * (1 - progress);
+  const trackColor = isWorking ? "rgba(255,0,0,0.12)" : "rgba(0,200,80,0.12)";
 
   return (
-    <svg
-      width={size}
-      height={size}
-      className="absolute inset-0 m-auto pointer-events-none"
-      style={{ transform: "rotate(-90deg)" }}
+    <div
+      className="rounded-xl p-[3px]"
+      style={{
+        background: `conic-gradient(${color} ${progress}%, ${trackColor} ${progress}%)`,
+        transition: "background 0.5s ease",
+      }}
     >
-      {/* Track */}
-      <circle
-        cx={size / 2}
-        cy={size / 2}
-        r={radius}
-        fill="none"
-        stroke={trackColor}
-        strokeWidth={strokeWidth}
-      />
-      {/* Progress */}
-      <circle
-        cx={size / 2}
-        cy={size / 2}
-        r={radius}
-        fill="none"
-        stroke={color}
-        strokeWidth={strokeWidth}
-        strokeDasharray={circumference}
-        strokeDashoffset={dashOffset}
-        strokeLinecap="round"
-        style={{ transition: "stroke-dashoffset 0.5s ease" }}
-      />
-    </svg>
+      <div className="rounded-[9px] bg-base-100/80 backdrop-blur-sm px-4 py-2">
+        {/* Inner content rendered by parent */}
+      </div>
+    </div>
+  );
+}
+
+/** Wraps children with a conic-gradient progress border */
+export function ProgressBorder({
+  secondsLeft,
+  totalSeconds,
+  isWorking,
+  children,
+}: ProgressBarProps & { children: React.ReactNode }) {
+  const progress = totalSeconds > 0 ? ((totalSeconds - secondsLeft) / totalSeconds) * 100 : 0;
+  const color = isWorking ? "var(--color-error)" : "var(--color-success)";
+  const trackColor = isWorking ? "rgba(255,0,0,0.12)" : "rgba(0,200,80,0.12)";
+
+  return (
+    <div
+      className="rounded-xl p-[2px] inline-flex"
+      style={{
+        background: `conic-gradient(${color} ${progress}%, ${trackColor} ${progress}%)`,
+        transition: "background 0.5s ease",
+      }}
+    >
+      <div className="rounded-[10px] bg-base-100/90 backdrop-blur-sm">
+        {children}
+      </div>
+    </div>
   );
 }

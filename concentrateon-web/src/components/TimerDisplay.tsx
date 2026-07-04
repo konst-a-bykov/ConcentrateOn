@@ -1,14 +1,12 @@
 import { useTimerStore } from "../stores/timerStore";
 import { useTranslation } from "react-i18next";
-import { ProgressRing } from "./ProgressRing";
+import { ProgressBorder } from "./ProgressRing";
 
 export function TimerDisplay() {
   const { secondsLeft, isWorking, isShortRest, isStarted, workTimeMinutes, shortRestMinutes, longRestMinutes } = useTimerStore();
   const { t } = useTranslation();
 
-  const totalSeconds = isStarted
-    ? secondsLeft
-    : workTimeMinutes * 60;
+  const totalSeconds = isStarted ? secondsLeft : workTimeMinutes * 60;
 
   // Period total for progress calculation
   const periodTotal = !isStarted
@@ -43,19 +41,18 @@ export function TimerDisplay() {
       <div className="badge badge-outline landscape:badge-sm landscape:text-sm portrait:badge-lg portrait:text-lg px-3 py-2">
         {statusText}
       </div>
-      {/* Timer with embedded progress ring */}
-      <div className="relative flex items-center justify-center">
-        <ProgressRing
-          secondsLeft={secondsLeft}
-          totalSeconds={periodTotal}
-          isWorking={isWorking}
-        />
+      {/* Timer with conic-gradient progress border */}
+      <ProgressBorder
+        secondsLeft={secondsLeft}
+        totalSeconds={periodTotal}
+        isWorking={isWorking}
+      >
         <div
-          className={`font-mono landscape:text-4xl portrait:text-6xl font-bold tabular-nums ${counterColor} relative z-10`}
+          className={`font-mono landscape:text-4xl portrait:text-6xl font-bold tabular-nums ${counterColor} px-3 py-1`}
         >
           {timeStr}
         </div>
-      </div>
+      </ProgressBorder>
     </div>
   );
 }
