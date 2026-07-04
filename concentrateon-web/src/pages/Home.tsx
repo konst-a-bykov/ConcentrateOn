@@ -8,6 +8,8 @@ import { TimerDisplay } from "../components/TimerDisplay";
 import { ControlButtons } from "../components/ControlButtons";
 import { ThemeToggle } from "../components/ThemeToggle";
 
+import { useThemeStore } from "../stores/themeStore";
+
 const navItems = [
   { path: "/settings", label: "Settings" },
   { path: "/statistics", label: "Statistics" },
@@ -17,6 +19,9 @@ const navItems = [
 export function Home() {
   const { isStarted, isWorking, isShortRest, isLongRest, isPaused, tick } = useTimerStore();
   const manifest = useAnimationStore((s) => s.getSelectedManifest());
+  const theme = useThemeStore((s) => s.theme);
+  const bgBase = theme === "dark" ? "rgba(0,0,0,0.35)" : "rgba(255,255,255,0.25)";
+  const bgCard = theme === "dark" ? "rgba(0,0,0,0.3)" : "rgba(255,255,255,0.2)";
   const workerRef = useRef<Worker | null>(null);
 
   // Play sounds on work/rest transitions
@@ -76,7 +81,8 @@ export function Home() {
       {/* Floating menu button — top left */}
       <div ref={menuRef} className="absolute top-3 left-3 z-30">
         <button
-          className="btn btn-circle btn-sm bg-base-100/80 backdrop-blur-sm shadow-md border-none"
+          className="btn btn-circle btn-sm shadow-md border-none"
+          style={{ backgroundColor: bgBase, backdropFilter: "blur(4px)" }}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -104,7 +110,7 @@ export function Home() {
 
       {/* Timer + controls — top center */}
       <div className="absolute top-3 left-12 right-3 flex justify-center z-10">
-        <div className="card bg-base-100/80 backdrop-blur-sm shadow-xl px-4 py-3">
+        <div className="card shadow-xl px-4 py-3" style={{ backgroundColor: bgCard, backdropFilter: "blur(4px)" }}>
           <div className="flex flex-col portrait:flex-col landscape:flex-row items-center gap-2 landscape:gap-4">
             <TimerDisplay />
             <ControlButtons />
