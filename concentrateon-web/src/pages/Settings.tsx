@@ -128,20 +128,26 @@ export function Settings() {
             <div className="form-control">
               <label className="label">
                 <span className="label-text">{t("settings.volume")}</span>
+                <span className="label-text-alt font-mono">{volume}%</span>
               </label>
-              <select
-                className="select select-bordered w-full max-w-xs"
+              <input
+                type="range"
+                className="range range-primary range-sm"
+                min={0}
+                max={100}
+                step={25}
                 value={volume}
                 onChange={(e) =>
                   updateSettings({ volume: parseInt(e.target.value) })
                 }
-              >
-                <option value={0}>{t("settings.mute")}</option>
-                <option value={25}>25%</option>
-                <option value={50}>50%</option>
-                <option value={75}>75%</option>
-                <option value={100}>100%</option>
-              </select>
+              />
+              <div className="flex justify-between text-xs text-base-content/50 px-1 mt-1">
+                <span>🔇</span>
+                <span>25%</span>
+                <span>50%</span>
+                <span>75%</span>
+                <span>🔊</span>
+              </div>
             </div>
           </div>
         </div>

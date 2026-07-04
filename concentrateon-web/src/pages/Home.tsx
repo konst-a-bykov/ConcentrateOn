@@ -22,8 +22,6 @@ export function Home() {
   ];
   const manifest = useAnimationStore((s) => s.getSelectedManifest());
   const theme = useThemeStore((s) => s.theme);
-  const bgBase = theme === "dark" ? "rgba(0,0,0,0.35)" : "rgba(255,255,255,0.25)";
-  const bgCard = theme === "dark" ? "rgba(0,0,0,0.3)" : "rgba(255,255,255,0.2)";
   const workerRef = useRef<Worker | null>(null);
 
   // Play sounds on work/rest transitions
@@ -83,8 +81,12 @@ export function Home() {
       {/* Floating menu button — top left */}
       <div ref={menuRef} className="absolute top-3 left-3 z-30">
         <button
-          className="btn btn-circle btn-sm shadow-md border-none"
-          style={{ backgroundColor: bgBase, backdropFilter: "blur(4px)" }}
+          className="btn btn-circle btn-sm border border-white/20 dark:border-white/10"
+          style={{
+            backgroundColor: theme === "dark" ? "rgba(15,15,15,0.5)" : "rgba(255,255,255,0.35)",
+            backdropFilter: "blur(12px) saturate(1.5)",
+            WebkitBackdropFilter: "blur(12px) saturate(1.5)",
+          }}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -112,7 +114,17 @@ export function Home() {
 
       {/* Timer + controls — top center */}
       <div className="absolute top-3 left-12 right-3 flex justify-center z-10">
-        <div className="card shadow-xl px-4 py-3" style={{ backgroundColor: bgCard, backdropFilter: "blur(4px)" }}>
+        <div
+          className="rounded-2xl px-5 py-4 border border-white/20 dark:border-white/10"
+          style={{
+            backgroundColor: theme === "dark" ? "rgba(15,15,15,0.5)" : "rgba(255,255,255,0.35)",
+            backdropFilter: "blur(12px) saturate(1.5)",
+            WebkitBackdropFilter: "blur(12px) saturate(1.5)",
+            boxShadow: theme === "dark"
+              ? "0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05)"
+              : "0 8px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.6)",
+          }}
+        >
           <div className="flex flex-col portrait:flex-col landscape:flex-row items-center gap-2 landscape:gap-4">
             <TimerDisplay />
             <ControlButtons />
