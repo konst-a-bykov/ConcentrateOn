@@ -1,0 +1,121 @@
+﻿<Page
+    x:Class="ConcentrateOn.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ConcentrateOn"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="White"
+    SizeChanged="Page_SizeChanged">
+
+    <Page.Resources>
+        <Style x:Key="controlButtons" TargetType="Button">
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Transitions">
+                <Setter.Value>
+                    <TransitionCollection>
+                        <EntranceThemeTransition/>
+                    </TransitionCollection>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid x:Name="BackgroundGrid" Background="White">
+        <Grid.Resources>
+            <Storyboard x:Name="FadeOutOneStart">
+                <FadeOutThemeAnimation Storyboard.TargetName="bt_start"/>
+            </Storyboard>
+            <Storyboard x:Name="FadeInOneStart">
+                <FadeInThemeAnimation Storyboard.TargetName="bt_start"/>
+            </Storyboard>
+
+            <Storyboard x:Name="FadeOutOnePause">
+                <FadeOutThemeAnimation Storyboard.TargetName="bt_pause"/>
+            </Storyboard>
+            <Storyboard x:Name="FadeInOnePause">
+                <FadeInThemeAnimation Storyboard.TargetName="bt_pause"/>
+            </Storyboard>
+        </Grid.Resources>
+
+
+        <MediaPlayerElement Name="mediaElement_horizontal" x:FieldModifier="public" AreTransportControlsEnabled="False"
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Background="White"/>
+        <MediaPlayerElement Name="mediaElement_vertical" x:FieldModifier="public" AreTransportControlsEnabled="False"
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Background="White"/>
+
+
+        <controls:WrapPanel x:Name="wrap_panel" Orientation="Horizontal" 
+                            HorizontalAlignment="{Binding ElementName=tx_counter, Path=HorizontalAlignment}"
+                            VerticalAlignment="{Binding ElementName=tx_counter, Path=VerticalAlignment}">
+            <Border CornerRadius="8" Margin="15"  Background="#CCFFFFFF" >
+                <TextBlock x:Name="tx_status" FontSize="40"
+                       TextWrapping="WrapWholeWords" Foreground="{Binding ElementName=tx_counter, Path=BorderBrush}"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" x:FieldModifier="public"/>
+            </Border>
+            <Border x:Name="tx_counter" Margin="15" CornerRadius="8" BorderBrush="DarkRed" 
+                    BorderThickness="1" Background="#E5FFFFFF"  >
+                <TextBlock x:Name="tx_counter_content" Text="00:00" FontSize="40" Foreground="DarkRed" 
+                           Margin="10 0 10 5" x:FieldModifier="public"/>
+            </Border>
+        </controls:WrapPanel>
+
+        <Button x:Name="bt_start" HorizontalAlignment="Right"  Visibility="Visible"
+                VerticalAlignment="Center" Background="#CCFF0000" Foreground="Yellow" BorderBrush="DarkRed" 
+                Click="bt_start_Click" Style="{StaticResource controlButtons}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="&#xF5B0;" FontFamily="Segoe MDL2 Assets" FontSize="25" VerticalAlignment="Center"/>
+                <TextBlock x:Uid="bt_start_context" FontSize="25" Margin="8 0 0 0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="bt_pause" HorizontalAlignment="{Binding ElementName=bt_start, Path=HorizontalAlignment}" 
+                 Visibility="Collapsed"
+                VerticalAlignment="{Binding ElementName=bt_start, Path=VerticalAlignment}" Background="#CC00FF00" 
+                Foreground="Black" BorderBrush="DarkGreen"
+                Click="bt_pause_Click" Style="{StaticResource controlButtons}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="&#xE769;" FontFamily="Segoe MDL2 Assets" FontSize="25" VerticalAlignment="Center"/>
+                <TextBlock x:Uid="bt_pause_context" FontSize="25" Margin="8 0 0 0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <StackPanel x:Name="buttons_stack" Visibility="Collapsed" Orientation="Horizontal" 
+                    HorizontalAlignment="{Binding ElementName=bt_start, Path=HorizontalAlignment}" 
+                    VerticalAlignment="{Binding ElementName=bt_start, Path=VerticalAlignment}" Margin="20">
+            <StackPanel.Resources>
+                <Storyboard x:Name="FadeOut">
+                    <FadeOutThemeAnimation Storyboard.TargetName="bt_continue" />
+                    <FadeOutThemeAnimation Storyboard.TargetName="bt_stop" />
+                </Storyboard>
+                <Storyboard x:Name="FadeIn">
+                    <FadeInThemeAnimation Storyboard.TargetName="bt_continue" />
+                    <FadeInThemeAnimation Storyboard.TargetName="bt_stop" />
+                </Storyboard>
+            </StackPanel.Resources>
+            <Button x:Name="bt_continue"  Visibility="Visible"  Style="{StaticResource controlButtons}"
+                 Background="#CC00FF00" Foreground="Black" BorderBrush="DarkGreen" Click="bt_continue_Click" Margin="0"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="&#xE768;" FontFamily="Segoe MDL2 Assets" FontSize="25" VerticalAlignment="Center"/>
+                    <TextBlock x:Uid="bt_continue_context" FontSize="25" Margin="8 0 0 0" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="bt_stop" Visibility="Visible" Style="{StaticResource controlButtons}" Margin="0"
+                 Background="#CCFF0000" Foreground="Yellow" BorderBrush="DarkRed" Click="bt_stop_Click"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="&#xE71A;" FontFamily="Segoe MDL2 Assets" FontSize="25" VerticalAlignment="Center"/>
+                    <TextBlock x:Uid="bt_stop_context" FontSize="25" Margin="8 0 0 0" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Page>

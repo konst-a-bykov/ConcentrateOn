@@ -1,0 +1,157 @@
+{
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn.sln": {
+    "mtime": 1621152918.4037824,
+    "ast_hash": "50e7de91a40a40071de6973c1649cc74",
+    "semantic_hash": "50e7de91a40a40071de6973c1649cc74"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/About.xaml.cs": {
+    "mtime": 1622987531.2198284,
+    "ast_hash": "fe0d7a62016fe5c28a644754ae766aea",
+    "semantic_hash": "fe0d7a62016fe5c28a644754ae766aea"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Animations.cs": {
+    "mtime": 1619695597.500364,
+    "ast_hash": "8c818dc21bc580819133d52594b39c78",
+    "semantic_hash": "8c818dc21bc580819133d52594b39c78"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/AnimationsItem.cs": {
+    "mtime": 1619695605.5003676,
+    "ast_hash": "bc046f531a4cfb3dc9a8e8c807457fd5",
+    "semantic_hash": "bc046f531a4cfb3dc9a8e8c807457fd5"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/App.xaml.cs": {
+    "mtime": 1619883748.419848,
+    "ast_hash": "dc2e29a8089c386eea453a25ede68697",
+    "semantic_hash": "dc2e29a8089c386eea453a25ede68697"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/AsyncHelpers.cs": {
+    "mtime": 1619679465.5419486,
+    "ast_hash": "3fe45702ed1970bb67c6f8a23c15b7e4",
+    "semantic_hash": "3fe45702ed1970bb67c6f8a23c15b7e4"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/ConcentrateOn.csproj": {
+    "mtime": 1623960621.8915184,
+    "ast_hash": "7785371c5a8be840d523315cb17c955b",
+    "semantic_hash": "7785371c5a8be840d523315cb17c955b"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/ConcentrateOnSettings.cs": {
+    "mtime": 1619040855.8658657,
+    "ast_hash": "4f4c7e1f705609f73b0f5e1e7ddb701d",
+    "semantic_hash": "4f4c7e1f705609f73b0f5e1e7ddb701d"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Core.cs": {
+    "mtime": 1621155008.2089353,
+    "ast_hash": "438acc6298cdff4c85e9a06156695728",
+    "semantic_hash": "438acc6298cdff4c85e9a06156695728"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/DonatePage.xaml.cs": {
+    "mtime": 1622994629.5077713,
+    "ast_hash": "c1740dc7a2f317c1939126d281febc1f",
+    "semantic_hash": "c1740dc7a2f317c1939126d281febc1f"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Home.xaml.cs": {
+    "mtime": 1622987722.157948,
+    "ast_hash": "e9dd41280bbc262191c91ddbd033d691",
+    "semantic_hash": "e9dd41280bbc262191c91ddbd033d691"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/MainPage.xaml.cs": {
+    "mtime": 1622994578.8886945,
+    "ast_hash": "6a2d1583c5de7a8a5ad53e63a407e9b2",
+    "semantic_hash": "6a2d1583c5de7a8a5ad53e63a407e9b2"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Properties/AssemblyInfo.cs": {
+    "mtime": 1616834946.6917639,
+    "ast_hash": "53c70a8fb4c83f99d19d3a8c1258d68a",
+    "semantic_hash": "53c70a8fb4c83f99d19d3a8c1258d68a"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/SettingsPage.xaml.cs": {
+    "mtime": 1622987625.7213662,
+    "ast_hash": "849fd0e4b66c2d28667216e0dfb8f27e",
+    "semantic_hash": "849fd0e4b66c2d28667216e0dfb8f27e"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Statistics.xaml.cs": {
+    "mtime": 1622987786.447998,
+    "ast_hash": "ac2225468e58aa3dd2c3c800e16e1597",
+    "semantic_hash": "ac2225468e58aa3dd2c3c800e16e1597"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/StatisticsLog.cs": {
+    "mtime": 1621152801.3654983,
+    "ast_hash": "1520240b76b189690e50fe3652714390",
+    "semantic_hash": "1520240b76b189690e50fe3652714390"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/Encryptor/Encryption.cs": {
+    "mtime": 1619215652.6530495,
+    "ast_hash": "68e92c694ccdeb7a9597f00768c8b4ca",
+    "semantic_hash": "68e92c694ccdeb7a9597f00768c8b4ca"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/Encryptor/Encryptor.csproj": {
+    "mtime": 1619557781.3115885,
+    "ast_hash": "5c64ccedd1476b0738261af018e0e774",
+    "semantic_hash": "5c64ccedd1476b0738261af018e0e774"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/Encryptor/Program.cs": {
+    "mtime": 1619559908.2990553,
+    "ast_hash": "2372c73eb18a8bc279e0c245e1d1e5bc",
+    "semantic_hash": "2372c73eb18a8bc279e0c245e1d1e5bc"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/Encryptor/Properties/AssemblyInfo.cs": {
+    "mtime": 1619214008.7413673,
+    "ast_hash": "1087ef97a0e404d0ce9457cdf3b24e18",
+    "semantic_hash": "1087ef97a0e404d0ce9457cdf3b24e18"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/Encryptor/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs": {
+    "mtime": 1619215862.7786157,
+    "ast_hash": "896ab120ac6b6af2895fdb71c452b9d3",
+    "semantic_hash": "896ab120ac6b6af2895fdb71c452b9d3"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/Encryptor/obj/Release/.NETFramework,Version=v4.7.2.AssemblyAttributes.cs": {
+    "mtime": 1619214009.0823638,
+    "ast_hash": "896ab120ac6b6af2895fdb71c452b9d3",
+    "semantic_hash": "896ab120ac6b6af2895fdb71c452b9d3"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/About.txt": {
+    "mtime": 1619822804.6517475,
+    "ast_hash": "f3d446f0dd15f74498526aa05b055519",
+    "semantic_hash": "f3d446f0dd15f74498526aa05b055519"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/BundleArtifacts/Upload/arm.txt": {
+    "mtime": 1625083287.1817768,
+    "ast_hash": "69bf7677a8e91ae7666be4db35d26fef",
+    "semantic_hash": "69bf7677a8e91ae7666be4db35d26fef"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/BundleArtifacts/Upload/x64.txt": {
+    "mtime": 1625082617.9569833,
+    "ast_hash": "c735e1435c62e11f98f56bc414e87318",
+    "semantic_hash": "c735e1435c62e11f98f56bc414e87318"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/BundleArtifacts/Upload/x86.txt": {
+    "mtime": 1625081752.842284,
+    "ast_hash": "4a023c6779c44ffecda9da5d692122fd",
+    "semantic_hash": "4a023c6779c44ffecda9da5d692122fd"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/BundleArtifacts/arm.txt": {
+    "mtime": 1625083287.1587412,
+    "ast_hash": "28423a57673354294e3666bcf460b1e3",
+    "semantic_hash": "28423a57673354294e3666bcf460b1e3"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/BundleArtifacts/x64.txt": {
+    "mtime": 1625082617.9479809,
+    "ast_hash": "06ed6c5309658989278f2253fed9f2e6",
+    "semantic_hash": "06ed6c5309658989278f2253fed9f2e6"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/BundleArtifacts/x86.txt": {
+    "mtime": 1625081752.832286,
+    "ast_hash": "ecee910256e780d3c24ae14ca1ddd204",
+    "semantic_hash": "ecee910256e780d3c24ae14ca1ddd204"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/Encryptor/obj/Debug/Encryptor.csproj.FileListAbsolute.txt": {
+    "mtime": 1619695678.9553566,
+    "ast_hash": "3c701487eac7598efcdaa8fd25a5d0cd",
+    "semantic_hash": "3c701487eac7598efcdaa8fd25a5d0cd"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/Encryptor/obj/Release/Encryptor.csproj.FileListAbsolute.txt": {
+    "mtime": 1619701965.3925755,
+    "ast_hash": "ff86f512349c69c41172fcb57aa4c2f3",
+    "semantic_hash": "ff86f512349c69c41172fcb57aa4c2f3"
+  }
+}
