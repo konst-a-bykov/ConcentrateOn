@@ -153,5 +153,570 @@
     "mtime": 1619701965.3925755,
     "ast_hash": "ff86f512349c69c41172fcb57aa4c2f3",
     "semantic_hash": "ff86f512349c69c41172fcb57aa4c2f3"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/.oxlintrc.json": {
+    "mtime": 1783186328.5618901,
+    "ast_hash": "029f4905006c1fffd96bc863e2d98d3e",
+    "semantic_hash": "029f4905006c1fffd96bc863e2d98d3e"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/.vercel/project.json": {
+    "mtime": 1783199003.8971388,
+    "ast_hash": "10b6b0d5f9e0904736a8268f69bf56fc",
+    "semantic_hash": "10b6b0d5f9e0904736a8268f69bf56fc"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/package.json": {
+    "mtime": 1783186455.905658,
+    "ast_hash": "2248467664ae4e5aee01079dc7845652",
+    "semantic_hash": "2248467664ae4e5aee01079dc7845652"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/manifest.json": {
+    "mtime": 1783186588.856025,
+    "ast_hash": "6e6aac4bc6eb536192b32fb376577549",
+    "semantic_hash": "6e6aac4bc6eb536192b32fb376577549"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/App.tsx": {
+    "mtime": 1783186582.8023255,
+    "ast_hash": "2a491b5312652f6aade316d156b38bdd",
+    "semantic_hash": "2a491b5312652f6aade316d156b38bdd"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/components/ControlButtons.tsx": {
+    "mtime": 1783194109.543152,
+    "ast_hash": "6d380a1ec4d158b5b5a4c8e47a8b4421",
+    "semantic_hash": "6d380a1ec4d158b5b5a4c8e47a8b4421"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/components/Layout.tsx": {
+    "mtime": 1783194613.6113164,
+    "ast_hash": "1bf61aa75951b3110152b634035175ab",
+    "semantic_hash": "1bf61aa75951b3110152b634035175ab"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/components/ThemeToggle.tsx": {
+    "mtime": 1783188886.5824227,
+    "ast_hash": "7617cbb58e7ddd00563e40cea5b51aca",
+    "semantic_hash": "7617cbb58e7ddd00563e40cea5b51aca"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/components/TimerDisplay.tsx": {
+    "mtime": 1783194108.6348543,
+    "ast_hash": "ac07587ac9f210355038e45284cc9e76",
+    "semantic_hash": "ac07587ac9f210355038e45284cc9e76"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/engine/AnimationPlayer.tsx": {
+    "mtime": 1783193665.232307,
+    "ast_hash": "df54427dac3025eab1497133c37b1823",
+    "semantic_hash": "df54427dac3025eab1497133c37b1823"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/engine/animationLoader.ts": {
+    "mtime": 1783186495.0246334,
+    "ast_hash": "6019ba361c4c81916aa70455eeb77846",
+    "semantic_hash": "6019ba361c4c81916aa70455eeb77846"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/engine/timer.worker.ts": {
+    "mtime": 1783186495.0402324,
+    "ast_hash": "34dc0a6a5740058e7e124777f86c7bc5",
+    "semantic_hash": "34dc0a6a5740058e7e124777f86c7bc5"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/engine/types.ts": {
+    "mtime": 1783186474.8426151,
+    "ast_hash": "047a76ea17dbe149f37b493495868e70",
+    "semantic_hash": "047a76ea17dbe149f37b493495868e70"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/engine/useTimerSounds.ts": {
+    "mtime": 1783191435.474735,
+    "ast_hash": "955065c50b5c20b3b0a3dd49e00cd889",
+    "semantic_hash": "955065c50b5c20b3b0a3dd49e00cd889"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/i18n/index.ts": {
+    "mtime": 1783194035.315414,
+    "ast_hash": "374f83c597b331b78ca728b383373f8e",
+    "semantic_hash": "374f83c597b331b78ca728b383373f8e"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/i18n/locales/de.json": {
+    "mtime": 1783194268.9098234,
+    "ast_hash": "7fa36fb1a0fefef239a0d12568bd8165",
+    "semantic_hash": "7fa36fb1a0fefef239a0d12568bd8165"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/i18n/locales/en.json": {
+    "mtime": 1783194268.680464,
+    "ast_hash": "ee731b6ed62d3a3f3be2cf0134a6db13",
+    "semantic_hash": "ee731b6ed62d3a3f3be2cf0134a6db13"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/i18n/locales/fr.json": {
+    "mtime": 1783194269.2432325,
+    "ast_hash": "59eb01cdc37f1fd941e97b02a9d14661",
+    "semantic_hash": "59eb01cdc37f1fd941e97b02a9d14661"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/i18n/locales/he.json": {
+    "mtime": 1783194269.5135994,
+    "ast_hash": "ee6aaa27ca2107c000788ab8f0d6d505",
+    "semantic_hash": "ee6aaa27ca2107c000788ab8f0d6d505"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/i18n/locales/ru.json": {
+    "mtime": 1783194269.8191383,
+    "ast_hash": "0a70760cafd34f1cae6d957e4aed1e81",
+    "semantic_hash": "0a70760cafd34f1cae6d957e4aed1e81"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/main.tsx": {
+    "mtime": 1783194083.409021,
+    "ast_hash": "893c45d98e6b688a2bb40c3d5f0b3f33",
+    "semantic_hash": "893c45d98e6b688a2bb40c3d5f0b3f33"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/pages/About.tsx": {
+    "mtime": 1783194476.5340142,
+    "ast_hash": "e54f883c14567f39ecb3f1061e5aa571",
+    "semantic_hash": "e54f883c14567f39ecb3f1061e5aa571"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/pages/Home.tsx": {
+    "mtime": 1783194758.6209447,
+    "ast_hash": "832324c252a7d40ff21a3c7fafc98a7d",
+    "semantic_hash": "832324c252a7d40ff21a3c7fafc98a7d"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/pages/Settings.tsx": {
+    "mtime": 1783194332.4253204,
+    "ast_hash": "c5e72abcbdee4d8867d48ef8e6d96317",
+    "semantic_hash": "c5e72abcbdee4d8867d48ef8e6d96317"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/pages/Statistics.tsx": {
+    "mtime": 1783194439.4742694,
+    "ast_hash": "23b22cff91c4150fbd20c886782415f6",
+    "semantic_hash": "23b22cff91c4150fbd20c886782415f6"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/stores/animationStore.ts": {
+    "mtime": 1783186485.8299615,
+    "ast_hash": "2b0ae92c6dec501f02cd7a790813529f",
+    "semantic_hash": "2b0ae92c6dec501f02cd7a790813529f"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/stores/statisticsStore.ts": {
+    "mtime": 1783186485.8245244,
+    "ast_hash": "2f63e16aa9e83af4e62d9acbacce5c78",
+    "semantic_hash": "2f63e16aa9e83af4e62d9acbacce5c78"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/stores/themeStore.ts": {
+    "mtime": 1783186485.8339837,
+    "ast_hash": "c6f34b20256b4d06cb02be2bd47a4a58",
+    "semantic_hash": "c6f34b20256b4d06cb02be2bd47a4a58"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/src/stores/timerStore.ts": {
+    "mtime": 1783195115.2680504,
+    "ast_hash": "40e3fb9fbd9cbb053c95467f6fbc7eb7",
+    "semantic_hash": "40e3fb9fbd9cbb053c95467f6fbc7eb7"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/tsconfig.app.json": {
+    "mtime": 1783186622.3979208,
+    "ast_hash": "7e1bbaf4a90eca020f51987ead2054bf",
+    "semantic_hash": "7e1bbaf4a90eca020f51987ead2054bf"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/tsconfig.json": {
+    "mtime": 1783186328.5646918,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": "a3d39fa780ebff65444de257f291ce6c"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/tsconfig.node.json": {
+    "mtime": 1783186328.5649667,
+    "ast_hash": "f9cb81ddcea69ffdab672fc8c48dca66",
+    "semantic_hash": "f9cb81ddcea69ffdab672fc8c48dca66"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/vite.config.ts": {
+    "mtime": 1783186451.7936788,
+    "ast_hash": "1bb985f53a1f4b49625a48db184d5077",
+    "semantic_hash": "1bb985f53a1f4b49625a48db184d5077"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/encode-animations.sh": {
+    "mtime": 1783186978.8458593,
+    "ast_hash": "3759228a0cb719ba51057c71aa799d2c",
+    "semantic_hash": "3759228a0cb719ba51057c71aa799d2c"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/.hermes/plans/2026-07-04_200500-concentrateon-web.md": {
+    "mtime": 1783186240.030009,
+    "ast_hash": "a11c5d64b6229c2aa309dd9780a25057",
+    "semantic_hash": "a11c5d64b6229c2aa309dd9780a25057"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/.hermes/plans/2026-07-04_231500-hosting.md": {
+    "mtime": 1783196381.796651,
+    "ast_hash": "141bb6e09673df3c8051b469d007e62e",
+    "semantic_hash": "141bb6e09673df3c8051b469d007e62e"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/.vercel/README.txt": {
+    "mtime": 1783199003.8974664,
+    "ast_hash": "2b13c79d37d6ed82a3255b83b6815034",
+    "semantic_hash": "2b13c79d37d6ed82a3255b83b6815034"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/README.md": {
+    "mtime": 1783186328.561573,
+    "ast_hash": "10495bfcc6c568eca4dab6dd5df795d3",
+    "semantic_hash": "10495bfcc6c568eca4dab6dd5df795d3"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/index.html": {
+    "mtime": 1783199443.9741168,
+    "ast_hash": "aee3ae5f2552414c9e12cccff71d3bce",
+    "semantic_hash": "aee3ae5f2552414c9e12cccff71d3bce"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/ConcentrateOnLogo.png": {
+    "mtime": 1618481611.2003677,
+    "ast_hash": "4caead5356181df1fadaeb87663fc989",
+    "semantic_hash": "4caead5356181df1fadaeb87663fc989"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/ConcentrateOnLogo1080x1080.png": {
+    "mtime": 1623964476.374567,
+    "ast_hash": "057284c8bd973bd7ca3d1ea535b4bc63",
+    "semantic_hash": "057284c8bd973bd7ca3d1ea535b4bc63"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/ConcentrateOnLogo150x150.png": {
+    "mtime": 1623964777.376789,
+    "ast_hash": "95471f83b641fee67d695d32019e8f3e",
+    "semantic_hash": "95471f83b641fee67d695d32019e8f3e"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/ConcentrateOnLogo300x300.png": {
+    "mtime": 1623964622.6427915,
+    "ast_hash": "d7b80159a4a8b63fe4383b0d5cfe12e8",
+    "semantic_hash": "d7b80159a4a8b63fe4383b0d5cfe12e8"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/ConcentrateOnLogo71x71.png": {
+    "mtime": 1623964825.4267974,
+    "ast_hash": "fed213f891121b94790bfd6505b24b1d",
+    "semantic_hash": "fed213f891121b94790bfd6505b24b1d"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/ConcentrateOnLogo720x1080.png": {
+    "mtime": 1623964355.3160212,
+    "ast_hash": "e9e991c841c132af30cb37c72ecb29dd",
+    "semantic_hash": "e9e991c841c132af30cb37c72ecb29dd"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/LargeTile.scale-100.png": {
+    "mtime": 1618481689.909049,
+    "ast_hash": "a1f0a3bc78054d49db9903e1ceec7ecc",
+    "semantic_hash": "a1f0a3bc78054d49db9903e1ceec7ecc"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/LargeTile.scale-125.png": {
+    "mtime": 1618481689.9710455,
+    "ast_hash": "281b765280f82c19213de95f6de140a0",
+    "semantic_hash": "281b765280f82c19213de95f6de140a0"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/LargeTile.scale-150.png": {
+    "mtime": 1618481690.0420444,
+    "ast_hash": "6c4bc214576b1a88a348cbb17b97360f",
+    "semantic_hash": "6c4bc214576b1a88a348cbb17b97360f"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/LargeTile.scale-200.png": {
+    "mtime": 1618481690.1500432,
+    "ast_hash": "6c32ee84db59201771d7b68df09e0d56",
+    "semantic_hash": "6c32ee84db59201771d7b68df09e0d56"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/LargeTile.scale-400.png": {
+    "mtime": 1618481690.4800448,
+    "ast_hash": "348c87ef38a950ff8c505bb0b3090341",
+    "semantic_hash": "348c87ef38a950ff8c505bb0b3090341"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/LockScreenLogo.scale-200.png": {
+    "mtime": 1615418252.5576112,
+    "ast_hash": "4cb21539b4c1f49f8d2c7aaf03b37472",
+    "semantic_hash": "4cb21539b4c1f49f8d2c7aaf03b37472"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SmallTile.scale-100.png": {
+    "mtime": 1618481688.7780597,
+    "ast_hash": "10fb6394f6b735b94992cb4f1f01156b",
+    "semantic_hash": "10fb6394f6b735b94992cb4f1f01156b"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SmallTile.scale-125.png": {
+    "mtime": 1618481688.8330517,
+    "ast_hash": "c460c6e131c31d806f6ad3e8918f47c4",
+    "semantic_hash": "c460c6e131c31d806f6ad3e8918f47c4"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SmallTile.scale-150.png": {
+    "mtime": 1618481688.8750513,
+    "ast_hash": "b9ebc1ff01bbda50437869216c404a84",
+    "semantic_hash": "b9ebc1ff01bbda50437869216c404a84"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SmallTile.scale-200.png": {
+    "mtime": 1618481688.9210486,
+    "ast_hash": "2bca445f919c7c0187119cd258b3049a",
+    "semantic_hash": "2bca445f919c7c0187119cd258b3049a"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SmallTile.scale-400.png": {
+    "mtime": 1618481688.9910498,
+    "ast_hash": "c8a09c40e57238092740963379cee789",
+    "semantic_hash": "c8a09c40e57238092740963379cee789"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SplashScreen.scale-100.png": {
+    "mtime": 1618481691.114048,
+    "ast_hash": "c1025a80cf62da16c2e6b057fd26a60a",
+    "semantic_hash": "c1025a80cf62da16c2e6b057fd26a60a"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SplashScreen.scale-125.png": {
+    "mtime": 1618481691.1930394,
+    "ast_hash": "37aa1c941c60ba6c4975ec8249928762",
+    "semantic_hash": "37aa1c941c60ba6c4975ec8249928762"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SplashScreen.scale-150.png": {
+    "mtime": 1618481691.299044,
+    "ast_hash": "a730ecb065da007ec40b1f2a556dd1b9",
+    "semantic_hash": "a730ecb065da007ec40b1f2a556dd1b9"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SplashScreen.scale-200.png": {
+    "mtime": 1618481691.4670498,
+    "ast_hash": "48894e0b3195e2b0bf3c68ba7c74ff50",
+    "semantic_hash": "48894e0b3195e2b0bf3c68ba7c74ff50"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/SplashScreen.scale-400.png": {
+    "mtime": 1618481692.0510473,
+    "ast_hash": "f6c7cd75145819f74feb0a42fc927bfc",
+    "semantic_hash": "f6c7cd75145819f74feb0a42fc927bfc"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square150x150Logo.scale-100.png": {
+    "mtime": 1618481689.0530448,
+    "ast_hash": "d45d3d2ed4016e2562f08b09f74c0d8b",
+    "semantic_hash": "d45d3d2ed4016e2562f08b09f74c0d8b"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square150x150Logo.scale-125.png": {
+    "mtime": 1618481689.1070755,
+    "ast_hash": "c5703b29655d90721db2e1464517bffe",
+    "semantic_hash": "c5703b29655d90721db2e1464517bffe"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square150x150Logo.scale-150.png": {
+    "mtime": 1618481689.1570458,
+    "ast_hash": "8f588cc2567df88eece751539dec6534",
+    "semantic_hash": "8f588cc2567df88eece751539dec6534"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square150x150Logo.scale-200.png": {
+    "mtime": 1618481689.2210574,
+    "ast_hash": "d3458f6553c3fa608b23772f413b7acf",
+    "semantic_hash": "d3458f6553c3fa608b23772f413b7acf"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square150x150Logo.scale-400.png": {
+    "mtime": 1618481689.3980505,
+    "ast_hash": "e287022c39410006b890039c0ec71402",
+    "semantic_hash": "e287022c39410006b890039c0ec71402"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.altform-lightunplated_targetsize-16.png": {
+    "mtime": 1618481690.943049,
+    "ast_hash": "47662281783a08253e727015224e0146",
+    "semantic_hash": "47662281783a08253e727015224e0146"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.altform-lightunplated_targetsize-24.png": {
+    "mtime": 1618481690.9660552,
+    "ast_hash": "5a7c91c3f1c555c9a81f3c7632991c8e",
+    "semantic_hash": "5a7c91c3f1c555c9a81f3c7632991c8e"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.altform-lightunplated_targetsize-256.png": {
+    "mtime": 1618481691.0560648,
+    "ast_hash": "acad90db40d842ec12cd6e6fac62a1c8",
+    "semantic_hash": "acad90db40d842ec12cd6e6fac62a1c8"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.altform-lightunplated_targetsize-32.png": {
+    "mtime": 1618481690.9870427,
+    "ast_hash": "8748c8492cbff726ecf8ed76dbb3b376",
+    "semantic_hash": "8748c8492cbff726ecf8ed76dbb3b376"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.altform-lightunplated_targetsize-48.png": {
+    "mtime": 1618481691.0120451,
+    "ast_hash": "9ab8e411d99de23172a1ef5eed5917f6",
+    "semantic_hash": "9ab8e411d99de23172a1ef5eed5917f6"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.altform-unplated_targetsize-16.png": {
+    "mtime": 1618481690.8020496,
+    "ast_hash": "47662281783a08253e727015224e0146",
+    "semantic_hash": "47662281783a08253e727015224e0146"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.altform-unplated_targetsize-256.png": {
+    "mtime": 1618481690.9210393,
+    "ast_hash": "acad90db40d842ec12cd6e6fac62a1c8",
+    "semantic_hash": "acad90db40d842ec12cd6e6fac62a1c8"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.altform-unplated_targetsize-32.png": {
+    "mtime": 1618481690.8500433,
+    "ast_hash": "8748c8492cbff726ecf8ed76dbb3b376",
+    "semantic_hash": "8748c8492cbff726ecf8ed76dbb3b376"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.altform-unplated_targetsize-48.png": {
+    "mtime": 1618481690.873052,
+    "ast_hash": "9ab8e411d99de23172a1ef5eed5917f6",
+    "semantic_hash": "9ab8e411d99de23172a1ef5eed5917f6"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.scale-100.png": {
+    "mtime": 1618481690.5040438,
+    "ast_hash": "3cebfb3f7d947242ddac06e88dd1c04a",
+    "semantic_hash": "3cebfb3f7d947242ddac06e88dd1c04a"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.scale-125.png": {
+    "mtime": 1618481690.5270464,
+    "ast_hash": "5615726e56b113811eddb4361803e3eb",
+    "semantic_hash": "5615726e56b113811eddb4361803e3eb"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.scale-150.png": {
+    "mtime": 1618481690.5530455,
+    "ast_hash": "f031f897571b20c7eda8fc73809f06ca",
+    "semantic_hash": "f031f897571b20c7eda8fc73809f06ca"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.scale-200.png": {
+    "mtime": 1618481690.578052,
+    "ast_hash": "117332b4df9eb0fd1d4d0b5ddf4592f6",
+    "semantic_hash": "117332b4df9eb0fd1d4d0b5ddf4592f6"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.scale-400.png": {
+    "mtime": 1618481690.6140575,
+    "ast_hash": "9677f8c92c477019c1925d810ea3ee18",
+    "semantic_hash": "9677f8c92c477019c1925d810ea3ee18"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.targetsize-16.png": {
+    "mtime": 1618481690.6430504,
+    "ast_hash": "086bda01b9368d58dcd1da95e7c39d64",
+    "semantic_hash": "086bda01b9368d58dcd1da95e7c39d64"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.targetsize-24.png": {
+    "mtime": 1618481690.6720762,
+    "ast_hash": "b46856d8000595171ec5a61e1e7c87f0",
+    "semantic_hash": "b46856d8000595171ec5a61e1e7c87f0"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.targetsize-24_altform-unplated.png": {
+    "mtime": 1618481690.8260472,
+    "ast_hash": "5a7c91c3f1c555c9a81f3c7632991c8e",
+    "semantic_hash": "5a7c91c3f1c555c9a81f3c7632991c8e"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.targetsize-256.png": {
+    "mtime": 1618481690.7800539,
+    "ast_hash": "f8a3cd49aa522b8d06809ff24df76636",
+    "semantic_hash": "f8a3cd49aa522b8d06809ff24df76636"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.targetsize-32.png": {
+    "mtime": 1618481690.7060444,
+    "ast_hash": "ed9d4e680c08a9a68163f9e860302009",
+    "semantic_hash": "ed9d4e680c08a9a68163f9e860302009"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Square44x44Logo.targetsize-48.png": {
+    "mtime": 1618481690.7370474,
+    "ast_hash": "2fb4a6aa45de42853a394064eb422791",
+    "semantic_hash": "2fb4a6aa45de42853a394064eb422791"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/StoreLogo.backup.png": {
+    "mtime": 1615418252.5916119,
+    "ast_hash": "3b0fd2d8bb385fdf5035d66be31076c6",
+    "semantic_hash": "3b0fd2d8bb385fdf5035d66be31076c6"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/StoreLogo.scale-100.png": {
+    "mtime": 1618481692.0790465,
+    "ast_hash": "ab9e6678ed98341b147742e4ceeb9f1a",
+    "semantic_hash": "ab9e6678ed98341b147742e4ceeb9f1a"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/StoreLogo.scale-125.png": {
+    "mtime": 1618481692.1050456,
+    "ast_hash": "6c62524ed63908bd68b8d1258edb685e",
+    "semantic_hash": "6c62524ed63908bd68b8d1258edb685e"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/StoreLogo.scale-150.png": {
+    "mtime": 1618481692.128037,
+    "ast_hash": "f3d90cbabd330fe45aefee56fe5ef18d",
+    "semantic_hash": "f3d90cbabd330fe45aefee56fe5ef18d"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/StoreLogo.scale-200.png": {
+    "mtime": 1618481692.1590488,
+    "ast_hash": "bcc3f164dd08475af5afd2d447bfb4b6",
+    "semantic_hash": "bcc3f164dd08475af5afd2d447bfb4b6"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/StoreLogo.scale-400.png": {
+    "mtime": 1618481692.1970558,
+    "ast_hash": "7426b030ff7b27b47377e8aa29c87683",
+    "semantic_hash": "7426b030ff7b27b47377e8aa29c87683"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Wide310x150Logo.scale-100.png": {
+    "mtime": 1618481689.4330628,
+    "ast_hash": "75a392f757c48910080e8192c05d0070",
+    "semantic_hash": "75a392f757c48910080e8192c05d0070"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Wide310x150Logo.scale-125.png": {
+    "mtime": 1618481689.4970505,
+    "ast_hash": "5a27b8bddfbfc69fd3fef79ee14d500d",
+    "semantic_hash": "5a27b8bddfbfc69fd3fef79ee14d500d"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Wide310x150Logo.scale-150.png": {
+    "mtime": 1618481689.5700548,
+    "ast_hash": "9ce922936174483dce98a5877662f9d9",
+    "semantic_hash": "9ce922936174483dce98a5877662f9d9"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Wide310x150Logo.scale-200.png": {
+    "mtime": 1618481689.6600513,
+    "ast_hash": "c1025a80cf62da16c2e6b057fd26a60a",
+    "semantic_hash": "c1025a80cf62da16c2e6b057fd26a60a"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/Wide310x150Logo.scale-400.png": {
+    "mtime": 1618481689.864044,
+    "ast_hash": "48894e0b3195e2b0bf3c68ba7c74ff50",
+    "semantic_hash": "48894e0b3195e2b0bf3c68ba7c74ff50"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/ConcentrateOn/Assets/framePayMe.png": {
+    "mtime": 1622993418.600206,
+    "ast_hash": "42ef64413d492e3029042f4c0584b167",
+    "semantic_hash": "42ef64413d492e3029042f4c0584b167"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/thumbnail-rest.png": {
+    "mtime": 1783187002.7207565,
+    "ast_hash": "b760d0a8f1dcbe212cc1ecec9f695944",
+    "semantic_hash": "b760d0a8f1dcbe212cc1ecec9f695944"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/thumbnail-work.png": {
+    "mtime": 1783187002.7232928,
+    "ast_hash": "2cd0905ad7529a8c7920f699bb855e61",
+    "semantic_hash": "2cd0905ad7529a8c7920f699bb855e61"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/favicon.png": {
+    "mtime": 1783199438.4393258,
+    "ast_hash": "0a3b688df1aa4d77c5d0d7db570707fb",
+    "semantic_hash": "0a3b688df1aa4d77c5d0d7db570707fb"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/icon-192.png": {
+    "mtime": 1783195640.4249167,
+    "ast_hash": "c25fff8bcc7848aa0ab99466cfc461f8",
+    "semantic_hash": "c25fff8bcc7848aa0ab99466cfc461f8"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/icon-512.png": {
+    "mtime": 1783195640.45771,
+    "ast_hash": "09728a182fd2d0568c2239864ef9a8bd",
+    "semantic_hash": "09728a182fd2d0568c2239864ef9a8bd"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/bell-finish.mp3": {
+    "mtime": 1783187002.941231,
+    "ast_hash": "04aa0510d35812bbbf0064499c8bdae1",
+    "semantic_hash": "04aa0510d35812bbbf0064499c8bdae1"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/bell.mp3": {
+    "mtime": 1783187002.8193707,
+    "ast_hash": "4f1f4c6eefdf07b546c43ce59d1334ff",
+    "semantic_hash": "4f1f4c6eefdf07b546c43ce59d1334ff"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/resting-portrait.webm": {
+    "mtime": 1783186989.1508794,
+    "ast_hash": "5563fbc57bc987d5e8a7d78cf0d5d807",
+    "semantic_hash": "5563fbc57bc987d5e8a7d78cf0d5d807"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/resting.webm": {
+    "mtime": 1783186988.271219,
+    "ast_hash": "0bde6211922c2c3b9c65aed425083838",
+    "semantic_hash": "0bde6211922c2c3b9c65aed425083838"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/start-working-portrait.webm": {
+    "mtime": 1783186994.752764,
+    "ast_hash": "f430115723652726afb7efda34da4fc2",
+    "semantic_hash": "f430115723652726afb7efda34da4fc2"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/start-working.webm": {
+    "mtime": 1783186991.398456,
+    "ast_hash": "9dc9fd3e130b9f08c231f3cab47c1de8",
+    "semantic_hash": "9dc9fd3e130b9f08c231f3cab47c1de8"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/stop-working-portrait.webm": {
+    "mtime": 1783187002.698168,
+    "ast_hash": "011e327f5104e37da88600bf31d18d7a",
+    "semantic_hash": "011e327f5104e37da88600bf31d18d7a"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/stop-working.webm": {
+    "mtime": 1783186999.9320495,
+    "ast_hash": "4f1dfd0d2c8ff940b7d902fbc18ac7dd",
+    "semantic_hash": "4f1dfd0d2c8ff940b7d902fbc18ac7dd"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/working-portrait.webm": {
+    "mtime": 1783186997.5766745,
+    "ast_hash": "9ca87aca2523ff764cbeafe5d89f0837",
+    "semantic_hash": "9ca87aca2523ff764cbeafe5d89f0837"
+  },
+  "/Users/konstantinbykov/Documents/Data/MyProjects/ConcentrateOn/concentrateon-web/public/animations/ancient-man/working.webm": {
+    "mtime": 1783186996.10909,
+    "ast_hash": "50d2d64a81e5998882e2a12e5fc15d41",
+    "semantic_hash": "50d2d64a81e5998882e2a12e5fc15d41"
   }
 }
