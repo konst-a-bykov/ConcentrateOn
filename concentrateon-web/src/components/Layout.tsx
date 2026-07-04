@@ -47,6 +47,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <Link
                     to={item.path}
                     className={location.pathname === item.path ? "active" : ""}
+                    onClick={() => (document.activeElement as HTMLElement)?.blur()}
                   >
                     {item.label}
                   </Link>
