@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTimerStore } from "../stores/timerStore";
 import { useAnimationStore } from "../stores/animationStore";
 import { AnimationPlayer } from "../engine/AnimationPlayer";
+import { useTimerSounds } from "../engine/useTimerSounds";
 import { TimerDisplay } from "../components/TimerDisplay";
 import { ControlButtons } from "../components/ControlButtons";
 import { ThemeToggle } from "../components/ThemeToggle";
@@ -14,9 +15,12 @@ const navItems = [
 ];
 
 export function Home() {
-  const { isStarted, isWorking, isPaused, tick } = useTimerStore();
+  const { isStarted, isWorking, isShortRest, isLongRest, isPaused, tick } = useTimerStore();
   const manifest = useAnimationStore((s) => s.getSelectedManifest());
   const workerRef = useRef<Worker | null>(null);
+
+  // Play sounds on work/rest transitions
+  useTimerSounds(isStarted, isWorking, isShortRest, isLongRest);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 

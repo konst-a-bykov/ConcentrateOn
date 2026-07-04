@@ -7,6 +7,7 @@ export function Settings() {
     shortRestMinutes,
     longRestMinutes,
     intervalForLongRest,
+    volume,
     updateSettings,
   } = useTimerStore();
 
@@ -116,6 +117,31 @@ export function Settings() {
             </select>
           </div>
         </div>
+        {/* Sound volume */}
+        <div className="card bg-base-100 shadow-md">
+          <div className="card-body">
+            <h2 className="card-title">Sound</h2>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Notification volume</span>
+              </label>
+              <select
+                className="select select-bordered w-full max-w-xs"
+                value={volume}
+                onChange={(e) =>
+                  updateSettings({ volume: parseInt(e.target.value) })
+                }
+              >
+                <option value={0}>Mute (0%)</option>
+                <option value={25}>25%</option>
+                <option value={50}>50%</option>
+                <option value={75}>75%</option>
+                <option value={100}>100%</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

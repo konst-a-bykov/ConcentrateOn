@@ -18,6 +18,7 @@ export interface TimerState {
   shortRestMinutes: number;
   longRestMinutes: number;
   intervalForLongRest: number;
+  volume: number;
 
   // Actions
   start: () => void;
@@ -34,6 +35,7 @@ export interface TimerSettingsPayload {
   shortRestMinutes: number;
   longRestMinutes: number;
   intervalForLongRest: number;
+  volume: number;
 }
 
 function changeActivityPeriod(state: TimerState): Partial<TimerState> {
@@ -88,6 +90,7 @@ export const useTimerStore = create<TimerState>()(
       shortRestMinutes: 5,
       longRestMinutes: 15,
       intervalForLongRest: 4,
+      volume: 50,
 
       start: () =>
         set({
@@ -139,6 +142,8 @@ export const useTimerStore = create<TimerState>()(
           newState.longRestMinutes = settings.longRestMinutes;
         if (settings.intervalForLongRest !== undefined)
           newState.intervalForLongRest = settings.intervalForLongRest;
+        if (settings.volume !== undefined)
+          newState.volume = settings.volume;
         set(newState as TimerState);
 
         // Always sync secondsLeft with new settings when timer is not actively counting
@@ -194,6 +199,7 @@ export const useTimerStore = create<TimerState>()(
         isPaused: state.isPaused,
         secondsLeft: state.secondsLeft,
         breakCounter: state.breakCounter,
+        volume: state.volume,
       }),
       merge: (persisted, current) => {
         const merged = { ...current, ...(persisted as Partial<TimerState>) };
