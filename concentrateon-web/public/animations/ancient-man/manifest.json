@@ -1,0 +1,38 @@
+{
+  "id": "ancient-man",
+  "name": "Ancient Man",
+  "orientations": {
+    "landscape": { "width": 1280, "height": 720 },
+    "portrait": { "width": 720, "height": 1280 }
+  },
+  "clips": {
+    "resting": {
+      "landscape": "resting.webm",
+      "portrait": "resting-portrait.webm",
+      "loop": true
+    },
+    "startWorking": {
+      "landscape": "start-working.webm",
+      "portrait": "start-working-portrait.webm",
+      "loop": false
+    },
+    "working": {
+      "landscape": "working.webm",
+      "portrait": "working-portrait.webm",
+      "loop": true
+    },
+    "stopWorking": {
+      "landscape": "stop-working.webm",
+      "portrait": "stop-working-portrait.webm",
+      "loop": false
+    }
+  },
+  "thumbnails": {
+    "rest": "thumbnail-rest.png",
+    "work": "thumbnail-work.png"
+  },
+  "audio": {
+    "bell": "bell.mp3",
+    "bellFinish": "bell-finish.mp3"
+  }
+}
