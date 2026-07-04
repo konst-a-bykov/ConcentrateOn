@@ -83,9 +83,12 @@ export function Home() {
         <button
           className="btn btn-circle btn-sm border border-white/20 dark:border-white/10"
           style={{
-            backgroundColor: theme === "dark" ? "rgba(15,15,15,0.5)" : "rgba(255,255,255,0.35)",
-            backdropFilter: "blur(12px) saturate(1.5)",
-            WebkitBackdropFilter: "blur(12px) saturate(1.5)",
+            backgroundColor: theme === "dark" ? "rgba(15,15,15,0.4)" : "rgba(255,255,255,0.15)",
+            backdropFilter: "blur(16px) saturate(1.8)",
+            WebkitBackdropFilter: "blur(16px) saturate(1.8)",
+            border: theme === "dark"
+              ? "1px solid rgba(255,255,255,0.1)"
+              : "1px solid rgba(255,255,255,0.5)",
           }}
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -115,14 +118,17 @@ export function Home() {
       {/* Timer + controls — top center */}
       <div className="absolute top-3 left-12 right-3 flex justify-center z-10">
         <div
-          className="rounded-2xl px-5 py-4 border border-white/20 dark:border-white/10"
+          className="rounded-2xl px-5 py-4"
           style={{
-            backgroundColor: theme === "dark" ? "rgba(15,15,15,0.5)" : "rgba(255,255,255,0.35)",
-            backdropFilter: "blur(12px) saturate(1.5)",
-            WebkitBackdropFilter: "blur(12px) saturate(1.5)",
+            backgroundColor: theme === "dark" ? "rgba(15,15,15,0.4)" : "rgba(255,255,255,0.15)",
+            backdropFilter: "blur(16px) saturate(1.8)",
+            WebkitBackdropFilter: "blur(16px) saturate(1.8)",
+            border: theme === "dark"
+              ? "1px solid rgba(255,255,255,0.1)"
+              : "1px solid rgba(255,255,255,0.5)",
             boxShadow: theme === "dark"
               ? "0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05)"
-              : "0 8px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.6)",
+              : "0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8)",
           }}
         >
           <div className="flex flex-col portrait:flex-col landscape:flex-row items-center gap-2 landscape:gap-4">
