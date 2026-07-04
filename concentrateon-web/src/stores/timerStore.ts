@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { useStatisticsStore } from "./statisticsStore";
 
 export type ActivityType = "WorkingTime" | "ShortRest" | "LongRest";
 
@@ -156,7 +157,29 @@ export const useTimerStore = create<TimerState>()(
 
       resume: () => set({ isPaused: false, startTimeMs: Date.now() - (get().workTimeMinutes * 60 - get().secondsLeft) * 1000 }),
 
-      stop: () =>
+      stop: () => {
+        const state = get();
+        // Log partial progress if timer was running
+        if (state.isStarted) {
+          const activityType: ActivityType = state.isWorking
+            ? "WorkingTime"
+            : state.isShortRest
+              ? "ShortRest"
+              : "LongRest";
+          const periodDuration = state.isWorking
+            ? state.workTimeMinutes * 60
+            : state.isShortRest
+              ? state.shortRestMinutes * 60
+              : state.longRestMinutes * 60;
+          const elapsed = periodDuration - state.secondsLeft;
+          if (elapsed > 0) {
+            useStatisticsStore.getState().addEntry({
+              startTime: Date.now() - elapsed * 1000,
+              durationSeconds: elapsed,
+              activityType,
+            });
+          }
+        }
         set({
           isPaused: false,
           isStarted: false,
@@ -164,15 +187,33 @@ export const useTimerStore = create<TimerState>()(
           isShortRest: false,
           isLongRest: false,
           breakCounter: 0,
-          secondsLeft: get().workTimeMinutes * 60,
+          secondsLeft: state.workTimeMinutes * 60,
           startTimeMs: null,
-        }),
+        });
+      },
 
       tick: () => {
         const state = get();
         if (!state.isStarted || state.isPaused) return;
 
         if (state.secondsLeft <= 0) {
+          // Log the completed period
+          const activityType: ActivityType = state.isWorking
+            ? "WorkingTime"
+            : state.isShortRest
+              ? "ShortRest"
+              : "LongRest";
+          const periodDuration = state.isWorking
+            ? state.workTimeMinutes * 60
+            : state.isShortRest
+              ? state.shortRestMinutes * 60
+              : state.longRestMinutes * 60;
+          useStatisticsStore.getState().addEntry({
+            startTime: Date.now() - periodDuration * 1000,
+            durationSeconds: periodDuration,
+            activityType,
+          });
+
           set(changeActivityPeriod(state));
           return;
         }
