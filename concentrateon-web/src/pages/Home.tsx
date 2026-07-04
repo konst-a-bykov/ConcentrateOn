@@ -8,7 +8,6 @@ import { TimerDisplay } from "../components/TimerDisplay";
 import { ControlButtons } from "../components/ControlButtons";
 import { ThemeToggle } from "../components/ThemeToggle";
 
-import { useThemeStore } from "../stores/themeStore";
 import { useTranslation } from "react-i18next";
 
 export function Home() {
@@ -21,7 +20,6 @@ export function Home() {
     { path: "/about", label: t("nav.about") },
   ];
   const manifest = useAnimationStore((s) => s.getSelectedManifest());
-  const theme = useThemeStore((s) => s.theme);
   const workerRef = useRef<Worker | null>(null);
 
   // Play sounds on work/rest transitions
