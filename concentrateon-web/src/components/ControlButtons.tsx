@@ -1,7 +1,9 @@
 import { useTimerStore } from "../stores/timerStore";
+import { useTranslation } from "react-i18next";
 
 export function ControlButtons() {
   const { isStarted, isPaused, start, pause, resume, stop } = useTimerStore();
+  const { t } = useTranslation();
 
   // Responsive button size: small in landscape (fits in row), large in portrait
   const btnSize = "landscape:btn-sm portrait:btn-lg";
@@ -30,7 +32,7 @@ export function ControlButtons() {
               d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          Start
+          {t("buttons.start")}
         </button>
       </div>
     );
@@ -54,7 +56,7 @@ export function ControlButtons() {
               d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
             />
           </svg>
-          Continue
+          {t("buttons.continue")}
         </button>
         <button className={`btn btn-error ${btnSize}`} onClick={stop}>
           <svg
@@ -77,7 +79,7 @@ export function ControlButtons() {
               d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"
             />
           </svg>
-          Stop
+          {t("buttons.stop")}
         </button>
       </div>
     );
@@ -100,7 +102,7 @@ export function ControlButtons() {
             d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
-        Pause
+        {t("buttons.pause")}
       </button>
     </div>
   );

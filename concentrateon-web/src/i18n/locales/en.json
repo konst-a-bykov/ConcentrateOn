@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "settings": "Settings",
+    "statistics": "Statistics",
+    "about": "About"
+  },
+  "timer": {
+    "ready": "Ready",
+    "concentrate": "Concentrate",
+    "shortRest": "Short Rest",
+    "longRest": "Long Rest"
+  },
+  "buttons": {
+    "start": "Start",
+    "pause": "Pause",
+    "continue": "Continue",
+    "stop": "Stop"
+  },
+  "settings": {
+    "title": "Settings",
+    "timer": "Timer",
+    "workDuration": "Work duration (minutes)",
+    "shortRest": "Short rest (minutes)",
+    "longRest": "Long rest (minutes)",
+    "intervalForLongRest": "Long rest after (number of short rests)",
+    "animation": "Animation",
+    "sound": "Sound",
+    "volume": "Notification volume",
+    "mute": "Mute (0%)",
+    "theme": "Theme",
+    "language": "Language"
+  },
+  "stats": {
+    "title": "Statistics",
+    "clearAll": "Clear All",
+    "totalWork": "Total Work",
+    "totalRest": "Total Rest",
+    "sessions": "Sessions",
+    "time": "Time",
+    "activity": "Activity",
+    "duration": "Duration",
+    "work": "Work",
+    "shortRest": "Short Rest",
+    "longRest": "Long Rest",
+    "empty": "No activity logged yet. Start a timer to begin tracking."
+  },
+  "about": {
+    "title": "About ConcentrateOn",
+    "technique": "The Pomodoro Technique",
+    "techniqueText": "The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It uses a timer to break work into intervals, traditionally 25 minutes in length, separated by short breaks.",
+    "app": "ConcentrateOn",
+    "appText": "ConcentrateOn is a Pomodoro timer with animated characters that react to your work and rest states.",
+    "defaults": "Default Settings",
+    "workPeriod": "Work period: 25 minutes",
+    "shortRestDefault": "Short rest: 5 minutes",
+    "longRestDefault": "Long rest: 15 minutes (every 4th break)"
+  }
+}

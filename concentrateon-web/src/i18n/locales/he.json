@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "מסך ראשי",
+    "settings": "הגדרות",
+    "statistics": "סטטיסטיקה",
+    "about": "אודות"
+  },
+  "timer": {
+    "ready": "מוכן",
+    "concentrate": "להתרכז!",
+    "shortRest": "מנוחה קצרה",
+    "longRest": "מנוחה ארוכה"
+  },
+  "buttons": {
+    "start": "התחלה",
+    "pause": "הפסקה",
+    "continue": "להמשיך",
+    "stop": "תפסיק"
+  },
+  "settings": {
+    "title": "הגדרות",
+    "timer": "טיימר",
+    "workDuration": "עבודה (דקות)",
+    "shortRest": "מנוחה קצרה (דקות)",
+    "longRest": "מנוחה ארוכה (דקות)",
+    "intervalForLongRest": "מספר מחזורי העבודה",
+    "animation": "אנימציה",
+    "sound": "קול",
+    "volume": "עוצמת ההתראות",
+    "mute": "השתקה (0%)",
+    "theme": "ערכת נושא",
+    "language": "שפה"
+  },
+  "stats": {
+    "title": "סטטיסטיקה",
+    "clearAll": "נקה הכל",
+    "totalWork": "עבודה כוללת",
+    "totalRest": "מנוחה כוללת",
+    "sessions": "מפגשים",
+    "time": "זמן",
+    "activity": "פעילות",
+    "duration": "משך",
+    "work": "עבודה",
+    "shortRest": "מנוחה קצרה",
+    "longRest": "מנוחה ארוכה",
+    "empty": "אין פעילות רשומה עדיין. התחל טיימר."
+  },
+  "about": {
+    "title": "אודות ConcentrateOn",
+    "technique": "טכניקת פומודורו",
+    "techniqueText": "טכניקת פומודורו היא טכניקת ניהול זמן שפותחה על ידי פרנצ'סקו סירילו בסוף שנות השמונים.",
+    "app": "ConcentrateOn",
+    "appText": "ConcentrateOn הוא טיימר פומודורו עם דמויות מונפשות שמגיבות למצבי העבודה והמנוחה שלך.",
+    "defaults": "הגדרות ברירת מחדל",
+    "workPeriod": "תקופת עבודה: 25 דקות",
+    "shortRestDefault": "מנוחה קצרה: 5 דקות",
+    "longRestDefault": "מנוחה ארוכה: 15 דקות (כל 4 הפסקות)"
+  }
+}

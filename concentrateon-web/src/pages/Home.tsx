@@ -9,15 +9,17 @@ import { ControlButtons } from "../components/ControlButtons";
 import { ThemeToggle } from "../components/ThemeToggle";
 
 import { useThemeStore } from "../stores/themeStore";
-
-const navItems = [
-  { path: "/settings", label: "Settings" },
-  { path: "/statistics", label: "Statistics" },
-  { path: "/about", label: "About" },
-];
+import { useTranslation } from "react-i18next";
 
 export function Home() {
   const { isStarted, isWorking, isShortRest, isLongRest, isPaused, tick } = useTimerStore();
+  const { t } = useTranslation();
+
+  const navItems = [
+    { path: "/settings", label: t("nav.settings") },
+    { path: "/statistics", label: t("nav.statistics") },
+    { path: "/about", label: t("nav.about") },
+  ];
   const manifest = useAnimationStore((s) => s.getSelectedManifest());
   const theme = useThemeStore((s) => s.theme);
   const bgBase = theme === "dark" ? "rgba(0,0,0,0.35)" : "rgba(255,255,255,0.25)";

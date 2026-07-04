@@ -1,7 +1,9 @@
 import { useTimerStore } from "../stores/timerStore";
+import { useTranslation } from "react-i18next";
 
 export function TimerDisplay() {
   const { secondsLeft, isWorking, isShortRest, isStarted } = useTimerStore();
+  const { t } = useTranslation();
 
   const totalSeconds = isStarted
     ? secondsLeft
@@ -16,12 +18,12 @@ export function TimerDisplay() {
       : `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 
   const statusText = !isStarted
-    ? "Ready"
+    ? t("timer.ready")
     : isWorking
-      ? "Concentrate"
+      ? t("timer.concentrate")
       : isShortRest
-        ? "Short Rest"
-        : "Long Rest";
+        ? t("timer.shortRest")
+        : t("timer.longRest");
 
   const counterColor = isWorking ? "text-error" : "text-success";
 

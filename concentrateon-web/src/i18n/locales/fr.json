@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "L'écran principal",
+    "settings": "Paramètres",
+    "statistics": "Statistique",
+    "about": "À propos"
+  },
+  "timer": {
+    "ready": "Prêt",
+    "concentrate": "Concentré!",
+    "shortRest": "Repos court",
+    "longRest": "Long repos"
+  },
+  "buttons": {
+    "start": "Démarer",
+    "pause": "Pause",
+    "continue": "Continuer",
+    "stop": "Stop"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "timer": "Minuterie",
+    "workDuration": "Travail (minutes)",
+    "shortRest": "Repos court (minutes)",
+    "longRest": "Long repos (minutes)",
+    "intervalForLongRest": "Nombre de périodes de travail par cycle",
+    "animation": "Animation",
+    "sound": "Son",
+    "volume": "Volume des notifications",
+    "mute": "Muet (0%)",
+    "theme": "Thème",
+    "language": "Langue"
+  },
+  "stats": {
+    "title": "Statistique",
+    "clearAll": "Tout effacer",
+    "totalWork": "Travail total",
+    "totalRest": "Repos total",
+    "sessions": "Sessions",
+    "time": "Temps",
+    "activity": "Activité",
+    "duration": "Durée",
+    "work": "Travail",
+    "shortRest": "Repos court",
+    "longRest": "Long repos",
+    "empty": "Aucune activité enregistrée. Démarrez une minuterie."
+  },
+  "about": {
+    "title": "À propos de ConcentrateOn",
+    "technique": "La technique de la Tomate",
+    "techniqueText": "La technique de la Tomate est une méthode de gestion du temps développée par Francesco Cirillo à la fin des années 1980.",
+    "app": "ConcentrateOn",
+    "appText": "ConcentrateOn est une minuterie Pomodoro avec des personnages animés qui réagissent à vos états de travail et de repos.",
+    "defaults": "Paramètres par défaut",
+    "workPeriod": "Période de travail: 25 minutes",
+    "shortRestDefault": "Repos court: 5 minutes",
+    "longRestDefault": "Long repos: 15 minutes (tous les 4 repos)"
+  }
+}

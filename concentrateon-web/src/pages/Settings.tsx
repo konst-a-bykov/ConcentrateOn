@@ -1,5 +1,7 @@
 import { useTimerStore } from "../stores/timerStore";
 import { useAnimationStore } from "../stores/animationStore";
+import { useTranslation } from "react-i18next";
+import { setLanguage } from "../i18n";
 
 export function Settings() {
   const {
@@ -14,18 +16,20 @@ export function Settings() {
   const { selectedPackId, setPack, packs } = useAnimationStore();
   const packList = Object.values(packs);
 
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="container mx-auto max-w-2xl p-6">
-      <h1 className="text-3xl font-bold mb-6">Settings</h1>
+      <h1 className="text-3xl font-bold mb-6">{t("settings.title")}</h1>
 
       <div className="space-y-6">
         {/* Timer durations */}
         <div className="card bg-base-100 shadow-md">
           <div className="card-body">
-            <h2 className="card-title">Timer</h2>
+            <h2 className="card-title">{t("settings.timer")}</h2>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Work duration (minutes)</span>
+                <span className="label-text">{t("settings.workDuration")}</span>
               </label>
               <input
                 type="number"
@@ -42,7 +46,7 @@ export function Settings() {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Short rest (minutes)</span>
+                <span className="label-text">{t("settings.shortRest")}</span>
               </label>
               <input
                 type="number"
@@ -59,7 +63,7 @@ export function Settings() {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Long rest (minutes)</span>
+                <span className="label-text">{t("settings.longRest")}</span>
               </label>
               <input
                 type="number"
@@ -77,7 +81,7 @@ export function Settings() {
             <div className="form-control">
               <label className="label">
                 <span className="label-text">
-                  Long rest after (number of short rests)
+                  {t("settings.intervalForLongRest")}
                 </span>
               </label>
               <input
@@ -99,7 +103,7 @@ export function Settings() {
         {/* Animation picker */}
         <div className="card bg-base-100 shadow-md">
           <div className="card-body">
-            <h2 className="card-title">Animation</h2>
+            <h2 className="card-title">{t("settings.animation")}</h2>
             <select
               className="select select-bordered w-full max-w-xs"
               value={selectedPackId}
@@ -120,10 +124,10 @@ export function Settings() {
         {/* Sound volume */}
         <div className="card bg-base-100 shadow-md">
           <div className="card-body">
-            <h2 className="card-title">Sound</h2>
+            <h2 className="card-title">{t("settings.sound")}</h2>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Notification volume</span>
+                <span className="label-text">{t("settings.volume")}</span>
               </label>
               <select
                 className="select select-bordered w-full max-w-xs"
@@ -132,13 +136,31 @@ export function Settings() {
                   updateSettings({ volume: parseInt(e.target.value) })
                 }
               >
-                <option value={0}>Mute (0%)</option>
+                <option value={0}>{t("settings.mute")}</option>
                 <option value={25}>25%</option>
                 <option value={50}>50%</option>
                 <option value={75}>75%</option>
                 <option value={100}>100%</option>
               </select>
             </div>
+          </div>
+        </div>
+
+        {/* Language */}
+        <div className="card bg-base-100 shadow-md">
+          <div className="card-body">
+            <h2 className="card-title">{t("settings.language")}</h2>
+            <select
+              className="select select-bordered w-full max-w-xs"
+              value={i18n.language}
+              onChange={(e) => setLanguage(e.target.value)}
+            >
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+              <option value="fr">Français</option>
+              <option value="he">עברית</option>
+              <option value="ru">Русский</option>
+            </select>
           </div>
         </div>
 

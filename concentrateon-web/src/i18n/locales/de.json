@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Homepage",
+    "settings": "Einstellungen",
+    "statistics": "Statistik",
+    "about": "Über App"
+  },
+  "timer": {
+    "ready": "Bereit",
+    "concentrate": "Konzentrier!",
+    "shortRest": "Kurze Pause",
+    "longRest": "Lange Pause"
+  },
+  "buttons": {
+    "start": "Start",
+    "pause": "Pause",
+    "continue": "Weiter",
+    "stop": "Stop"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "timer": "Timer",
+    "workDuration": "Arbeitszeit (Minuten)",
+    "shortRest": "Kurze Pause (Minuten)",
+    "longRest": "Lange Pause (Minuten)",
+    "intervalForLongRest": "Arbeitsperioden in einem Zyklus",
+    "animation": "Animation",
+    "sound": "Ton",
+    "volume": "Benachrichtigungslautstärke",
+    "mute": "Stumm (0%)",
+    "theme": "Thema",
+    "language": "Sprache"
+  },
+  "stats": {
+    "title": "Statistik",
+    "clearAll": "Alles löschen",
+    "totalWork": "Gesamtarbeit",
+    "totalRest": "Gesamtpause",
+    "sessions": "Sitzungen",
+    "time": "Zeit",
+    "activity": "Aktivität",
+    "duration": "Dauer",
+    "work": "Arbeit",
+    "shortRest": "Kurze Pause",
+    "longRest": "Lange Pause",
+    "empty": "Noch keine Aktivität protokolliert. Starten Sie einen Timer."
+  },
+  "about": {
+    "title": "Über ConcentrateOn",
+    "technique": "Die Pomodoro-Technik",
+    "techniqueText": "Die Pomodoro-Technik ist eine Zeitmanagement-Technik, die Ende der 1980er Jahre von Francesco Cirillo entwickelt wurde. Sie verwendet einen Timer, um die Arbeit in Intervalle zu unterteilen.",
+    "app": "ConcentrateOn",
+    "appText": "ConcentrateOn ist ein Pomodoro-Timer mit animierten Charakteren, die auf Ihre Arbeits- und Ruhephasen reagieren.",
+    "defaults": "Standardeinstellungen",
+    "workPeriod": "Arbeitszeit: 25 Minuten",
+    "shortRestDefault": "Kurze Pause: 5 Minuten",
+    "longRestDefault": "Lange Pause: 15 Minuten (jede 4. Pause)"
+  }
+}

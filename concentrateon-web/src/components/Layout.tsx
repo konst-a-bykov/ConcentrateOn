@@ -1,15 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ThemeToggle } from "./ThemeToggle";
-
-const navItems = [
-  { path: "/", label: "Home" },
-  { path: "/settings", label: "Settings" },
-  { path: "/statistics", label: "Statistics" },
-  { path: "/about", label: "About" },
-];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
+  const { t } = useTranslation();
+
+  const navItems = [
+    { path: "/", label: t("nav.home") },
+    { path: "/settings", label: t("nav.settings") },
+    { path: "/statistics", label: t("nav.statistics") },
+    { path: "/about", label: t("nav.about") },
+  ];
 
   // Home page handles its own layout (full viewport video)
   if (location.pathname === "/") {
