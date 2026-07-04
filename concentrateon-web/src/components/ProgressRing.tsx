@@ -4,7 +4,7 @@ interface ProgressBarProps {
   isWorking: boolean;
 }
 
-/** Wraps children with a conic-gradient progress border — no solid inner background */
+/** Wraps children with a conic-gradient progress border */
 export function ProgressBorder({
   secondsLeft,
   totalSeconds,
@@ -23,7 +23,7 @@ export function ProgressBorder({
         transition: "background 0.5s ease",
       }}
     >
-      <div className="rounded-[10px]">
+      <div className="rounded-[10px] bg-base-100/80">
         {children}
       </div>
     </div>
