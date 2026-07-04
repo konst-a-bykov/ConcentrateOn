@@ -3,13 +3,16 @@ import { useTimerStore } from "../stores/timerStore";
 export function ControlButtons() {
   const { isStarted, isPaused, start, pause, resume, stop } = useTimerStore();
 
+  // Responsive button size: small in landscape (fits in row), large in portrait
+  const btnSize = "landscape:btn-sm portrait:btn-lg";
+
   if (!isStarted) {
     return (
-      <div className="flex gap-3">
-        <button className="btn btn-error btn-lg" onClick={start}>
+      <div className="flex gap-2">
+        <button className={`btn btn-error ${btnSize}`} onClick={start}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -35,11 +38,11 @@ export function ControlButtons() {
 
   if (isPaused) {
     return (
-      <div className="flex gap-3">
-        <button className="btn btn-success btn-lg" onClick={resume}>
+      <div className="flex gap-2">
+        <button className={`btn btn-success ${btnSize}`} onClick={resume}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -53,10 +56,10 @@ export function ControlButtons() {
           </svg>
           Continue
         </button>
-        <button className="btn btn-error btn-lg" onClick={stop}>
+        <button className={`btn btn-error ${btnSize}`} onClick={stop}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -81,11 +84,11 @@ export function ControlButtons() {
   }
 
   return (
-    <div className="flex gap-3">
-      <button className="btn btn-warning btn-lg" onClick={pause}>
+    <div className="flex gap-2">
+      <button className={`btn btn-warning ${btnSize}`} onClick={pause}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className="h-5 w-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

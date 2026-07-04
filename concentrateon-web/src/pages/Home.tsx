@@ -99,9 +99,9 @@ export function Home() {
       </div>
 
       {/* Timer + controls — top center */}
-      <div className="absolute top-3 left-0 right-0 flex justify-center z-10">
-        <div className="card bg-base-100/80 backdrop-blur-sm shadow-xl px-6 py-4">
-          <div className="flex flex-col items-center gap-3">
+      <div className="absolute top-3 left-12 right-3 flex justify-center z-10">
+        <div className="card bg-base-100/80 backdrop-blur-sm shadow-xl px-4 py-3">
+          <div className="flex flex-col portrait:flex-col landscape:flex-row items-center gap-2 landscape:gap-4">
             <TimerDisplay />
             <ControlButtons />
           </div>

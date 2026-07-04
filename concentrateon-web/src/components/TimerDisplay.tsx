@@ -26,12 +26,12 @@ export function TimerDisplay() {
   const counterColor = isWorking ? "text-error" : "text-success";
 
   return (
-    <div className="flex flex-col items-center gap-2">
-      <div className="badge badge-lg badge-outline text-lg px-4 py-3">
+    <div className="flex portrait:flex-col items-center gap-2">
+      <div className="badge badge-outline landscape:badge-sm landscape:text-sm portrait:badge-lg portrait:text-lg px-3 py-2">
         {statusText}
       </div>
       <div
-        className={`font-mono text-6xl font-bold tabular-nums ${counterColor}`}
+        className={`font-mono landscape:text-4xl portrait:text-6xl font-bold tabular-nums ${counterColor}`}
       >
         {timeStr}
       </div>
