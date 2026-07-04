@@ -1,5 +1,6 @@
 import { useTimerStore } from "../stores/timerStore";
 import { useTranslation } from "react-i18next";
+import { ensureAudioUnlocked } from "../engine/useTimerSounds";
 
 export function ControlButtons() {
   const { isStarted, isPaused, start, pause, resume, stop } = useTimerStore();
@@ -11,7 +12,13 @@ export function ControlButtons() {
   if (!isStarted) {
     return (
       <div className="flex gap-2">
-        <button className={`btn btn-error ${btnSize}`} onClick={start}>
+        <button
+          className={`btn btn-error ${btnSize}`}
+          onClick={() => {
+            ensureAudioUnlocked();
+            start();
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
