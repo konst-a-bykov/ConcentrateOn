@@ -12,6 +12,7 @@ export interface TimerState {
   breakCounter: number;
   isPaused: boolean;
   isStarted: boolean;
+  startTimeMs: number | null;
 
   // Settings
   workTimeMinutes: number;
@@ -27,7 +28,6 @@ export interface TimerState {
   stop: () => void;
   tick: () => void;
   updateSettings: (settings: Partial<TimerSettingsPayload>) => void;
-  restoreFromStartTime: (startTimeMs: number) => void;
 }
 
 export interface TimerSettingsPayload {
@@ -40,10 +40,8 @@ export interface TimerSettingsPayload {
 
 function changeActivityPeriod(state: TimerState): Partial<TimerState> {
   if (state.isWorking && state.isStarted) {
-    // Work period ended → start rest
     const newBreakCounter = state.breakCounter + 1;
     if (newBreakCounter >= state.intervalForLongRest) {
-      // Long rest
       return {
         isWorking: false,
         isShortRest: false,
@@ -52,7 +50,6 @@ function changeActivityPeriod(state: TimerState): Partial<TimerState> {
         secondsLeft: state.longRestMinutes * 60,
       };
     } else {
-      // Short rest
       return {
         isWorking: false,
         isShortRest: true,
@@ -62,7 +59,6 @@ function changeActivityPeriod(state: TimerState): Partial<TimerState> {
       };
     }
   } else if (state.isStarted && (state.isShortRest || state.isLongRest)) {
-    // Rest period ended → start work
     return {
       isWorking: true,
       isShortRest: false,
@@ -71,6 +67,57 @@ function changeActivityPeriod(state: TimerState): Partial<TimerState> {
     };
   }
   return {};
+}
+
+/** Replay ticks from startTime to reconstruct current timer position */
+function restoreFromStartTime(
+  startTimeMs: number,
+  workTimeMinutes: number,
+  shortRestMinutes: number,
+  longRestMinutes: number,
+  intervalForLongRest: number
+): Partial<TimerState> {
+  const elapsedSeconds = Math.floor((Date.now() - startTimeMs) / 1000);
+
+  let temp: TimerState = {
+    secondsLeft: workTimeMinutes * 60,
+    isWorking: true,
+    isShortRest: false,
+    isLongRest: false,
+    breakCounter: 0,
+    isPaused: false,
+    isStarted: true,
+    startTimeMs,
+    workTimeMinutes,
+    shortRestMinutes,
+    longRestMinutes,
+    intervalForLongRest,
+    volume: 50,
+    start: () => ({}),
+    pause: () => ({}),
+    resume: () => ({}),
+    stop: () => ({}),
+    tick: () => ({}),
+    updateSettings: () => ({}),
+  };
+
+  for (let i = 0; i < elapsedSeconds; i++) {
+    if (temp.secondsLeft <= 0) {
+      temp = { ...temp, ...changeActivityPeriod(temp) };
+    }
+    temp.secondsLeft--;
+  }
+
+  return {
+    secondsLeft: temp.secondsLeft,
+    isWorking: temp.isWorking,
+    isShortRest: temp.isShortRest,
+    isLongRest: temp.isLongRest,
+    breakCounter: temp.breakCounter,
+    isStarted: true,
+    isPaused: false,
+    startTimeMs,
+  };
 }
 
 export const useTimerStore = create<TimerState>()(
@@ -84,6 +131,7 @@ export const useTimerStore = create<TimerState>()(
       breakCounter: 0,
       isPaused: false,
       isStarted: false,
+      startTimeMs: null,
 
       // Settings
       workTimeMinutes: 25,
@@ -101,11 +149,12 @@ export const useTimerStore = create<TimerState>()(
           isWorking: true,
           isShortRest: false,
           isLongRest: false,
+          startTimeMs: Date.now(),
         }),
 
       pause: () => set({ isPaused: true }),
 
-      resume: () => set({ isPaused: false }),
+      resume: () => set({ isPaused: false, startTimeMs: Date.now() - (get().workTimeMinutes * 60 - get().secondsLeft) * 1000 }),
 
       stop: () =>
         set({
@@ -116,6 +165,7 @@ export const useTimerStore = create<TimerState>()(
           isLongRest: false,
           breakCounter: 0,
           secondsLeft: get().workTimeMinutes * 60,
+          startTimeMs: null,
         }),
 
       tick: () => {
@@ -131,11 +181,9 @@ export const useTimerStore = create<TimerState>()(
       },
 
       updateSettings: (settings) => {
-        const current = get();
         const newState: Partial<TimerState> = {};
-        if (settings.workTimeMinutes !== undefined) {
+        if (settings.workTimeMinutes !== undefined)
           newState.workTimeMinutes = settings.workTimeMinutes;
-        }
         if (settings.shortRestMinutes !== undefined)
           newState.shortRestMinutes = settings.shortRestMinutes;
         if (settings.longRestMinutes !== undefined)
@@ -146,43 +194,10 @@ export const useTimerStore = create<TimerState>()(
           newState.volume = settings.volume;
         set(newState as TimerState);
 
-        // Always sync secondsLeft with new settings when timer is not actively counting
         const updated = get();
         if (!updated.isPaused && !updated.isStarted) {
           set({ secondsLeft: updated.workTimeMinutes * 60 });
         }
-      },
-
-      restoreFromStartTime: (startTimeMs: number) => {
-        const now = Date.now();
-        const elapsedSeconds = Math.floor((now - startTimeMs) / 1000);
-        const state = get();
-
-        // Reset to initial state
-        let tempState: TimerState = {
-          ...state,
-          breakCounter: 0,
-          secondsLeft: state.workTimeMinutes * 60,
-          isPaused: false,
-          isStarted: true,
-          isWorking: true,
-          isShortRest: false,
-          isLongRest: false,
-        };
-
-        // Replay ticks to restore position
-        for (let i = 0; i < elapsedSeconds; i++) {
-          if (tempState.secondsLeft <= 0) {
-            tempState = { ...tempState, ...changeActivityPeriod(tempState) };
-          }
-          tempState.secondsLeft--;
-        }
-
-        set({
-          ...tempState,
-          isStarted: true,
-          isPaused: false,
-        });
       },
     }),
     {
@@ -193,20 +208,43 @@ export const useTimerStore = create<TimerState>()(
         longRestMinutes: state.longRestMinutes,
         intervalForLongRest: state.intervalForLongRest,
         isStarted: state.isStarted,
-        isWorking: state.isWorking,
-        isShortRest: state.isShortRest,
-        isLongRest: state.isLongRest,
         isPaused: state.isPaused,
-        secondsLeft: state.secondsLeft,
-        breakCounter: state.breakCounter,
+        startTimeMs: state.startTimeMs,
         volume: state.volume,
       }),
       merge: (persisted, current) => {
-        const merged = { ...current, ...(persisted as Partial<TimerState>) };
-        // On reload, timer isn't actively running — always sync secondsLeft with settings
-        merged.secondsLeft = merged.workTimeMinutes * 60;
-        merged.isStarted = false;
-        merged.isPaused = false;
+        const p = persisted as Partial<TimerState>;
+        const merged = { ...current, ...p };
+
+        if (p.isStarted && p.startTimeMs) {
+          // Timer was running — restore position from start time
+          const restored = restoreFromStartTime(
+            p.startTimeMs,
+            merged.workTimeMinutes,
+            merged.shortRestMinutes,
+            merged.longRestMinutes,
+            merged.intervalForLongRest
+          );
+          Object.assign(merged, restored);
+        } else if (p.isPaused && p.startTimeMs) {
+          // Timer was paused — restore state but keep paused
+          const restored = restoreFromStartTime(
+            p.startTimeMs,
+            merged.workTimeMinutes,
+            merged.shortRestMinutes,
+            merged.longRestMinutes,
+            merged.intervalForLongRest
+          );
+          Object.assign(merged, restored);
+          merged.isPaused = true;
+        } else {
+          // Timer was stopped — show duration from settings
+          merged.secondsLeft = merged.workTimeMinutes * 60;
+          merged.isStarted = false;
+          merged.isPaused = false;
+          merged.startTimeMs = null;
+        }
+
         return merged;
       },
     }

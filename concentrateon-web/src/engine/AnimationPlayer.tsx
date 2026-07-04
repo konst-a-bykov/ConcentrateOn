@@ -108,10 +108,16 @@ export function AnimationPlayer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [orientation]);
 
-  // Initial load
+  // Initial load — set correct clip based on timer state
   useEffect(() => {
     if (manifest) {
-      playClip("resting");
+      if (isStarted && isWorking) {
+        playClip("working");
+      } else if (isStarted && !isWorking) {
+        playClip("resting");
+      } else {
+        playClip("resting");
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [manifest]);
