@@ -21,17 +21,33 @@ export function ensureAudioUnlocked(): void {
   gainNode = audioCtx.createGain();
   gainNode.connect(audioCtx.destination);
   gainNode.gain.value = 0; // updated to actual volume on each play()
+  // iOS Safari creates AudioContext in "suspended" state even inside
+  // a user gesture. Explicit resume() is required on iOS.
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume().catch(() => {
+      // Resume may fail on some iOS versions – handled at play time
+    });
+  }
 }
 
 function playUrl(url: string, volume: number): void {
   if (!audioCtx || !gainNode) return;
+
+  // If context is still suspended (e.g. iOS resume didn't complete yet),
+  // attempt to resume before playing
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
+  }
 
   // Set gain for this playback
   gainNode.gain.value = volume / 100;
 
   // Fetch + decode + play via the unlocked context
   fetch(url)
-    .then((res) => res.arrayBuffer())
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status} fetching ${url}`);
+      return res.arrayBuffer();
+    })
     .then((buf) => audioCtx!.decodeAudioData(buf))
     .then((decoded) => {
       const src = audioCtx!.createBufferSource();
@@ -39,8 +55,8 @@ function playUrl(url: string, volume: number): void {
       src.connect(gainNode!);
       src.start(0);
     })
-    .catch(() => {
-      // Fetch or decode failed – silently ignore
+    .catch((err) => {
+      console.warn("playUrl error:", err);
     });
 }
 

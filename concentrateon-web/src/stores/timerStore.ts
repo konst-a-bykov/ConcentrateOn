@@ -28,6 +28,7 @@ export interface TimerState {
   resume: () => void;
   stop: () => void;
   tick: () => void;
+  catchUp: () => void;
   updateSettings: (settings: Partial<TimerSettingsPayload>) => void;
 }
 
@@ -76,7 +77,8 @@ function restoreFromStartTime(
   workTimeMinutes: number,
   shortRestMinutes: number,
   longRestMinutes: number,
-  intervalForLongRest: number
+  intervalForLongRest: number,
+  onPeriodComplete?: (activityType: ActivityType, durationSeconds: number) => void
 ): Partial<TimerState> {
   const elapsedSeconds = Math.floor((Date.now() - startTimeMs) / 1000);
 
@@ -100,10 +102,24 @@ function restoreFromStartTime(
     stop: () => ({}),
     tick: () => ({}),
     updateSettings: () => ({}),
+    catchUp: () => ({}),
   };
 
   for (let i = 0; i < elapsedSeconds; i++) {
     if (temp.secondsLeft <= 0) {
+      if (onPeriodComplete) {
+        const activityType: ActivityType = temp.isWorking
+          ? "WorkingTime"
+          : temp.isShortRest
+            ? "ShortRest"
+            : "LongRest";
+        const pd = temp.isWorking
+          ? workTimeMinutes * 60
+          : temp.isShortRest
+            ? shortRestMinutes * 60
+            : longRestMinutes * 60;
+        onPeriodComplete(activityType, pd);
+      }
       temp = { ...temp, ...changeActivityPeriod(temp) };
     }
     temp.secondsLeft--;
@@ -219,6 +235,36 @@ export const useTimerStore = create<TimerState>()(
         }
 
         set({ secondsLeft: state.secondsLeft - 1 });
+      },
+
+      catchUp: () => {
+        const state = get();
+        if (!state.isStarted || state.isPaused || !state.startTimeMs) return;
+
+        const restored = restoreFromStartTime(
+          state.startTimeMs,
+          state.workTimeMinutes,
+          state.shortRestMinutes,
+          state.longRestMinutes,
+          state.intervalForLongRest,
+          (activityType, durationSeconds) => {
+            useStatisticsStore.getState().addEntry({
+              startTime: Date.now() - durationSeconds * 1000,
+              durationSeconds,
+              activityType,
+            });
+          }
+        );
+
+        set({
+          secondsLeft: restored.secondsLeft,
+          isWorking: restored.isWorking,
+          isShortRest: restored.isShortRest,
+          isLongRest: restored.isLongRest,
+          breakCounter: restored.breakCounter,
+          isPaused: false,
+          startTimeMs: restored.startTimeMs,
+        });
       },
 
       updateSettings: (settings) => {

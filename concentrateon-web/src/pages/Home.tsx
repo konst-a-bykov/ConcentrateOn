@@ -55,6 +55,17 @@ export function Home() {
     };
   }, []);
 
+  // Catch up timer when page becomes visible after being backgrounded
+  useEffect(() => {
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible") {
+        useTimerStore.getState().catchUp();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => document.removeEventListener("visibilitychange", handleVisibility);
+  }, []);
+
   // Close menu on outside click
   useEffect(() => {
     if (!menuOpen) return;
@@ -79,10 +90,10 @@ export function Home() {
       {/* Floating menu button — top left */}
       <div ref={menuRef} className="absolute top-3 left-3 z-30">
         <button
-          className="btn btn-circle btn-sm bg-base-100/40 shadow-md border-none"
+          className="btn btn-circle btn-md bg-base-100/40 shadow-md border-none min-w-10 min-h-10"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
